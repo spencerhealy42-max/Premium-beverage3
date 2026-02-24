@@ -8,96 +8,65 @@
 <style>
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-/* ===== MAIN HEADER ===== */
+/* HEADER */
 header {
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
               url("header-image.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 120px 30px;
+  color: white;
+  padding: 120px 20px;
   text-align: center;
 }
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
-}
-
-header p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.2rem;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
-}
-
-/* ===== BRAND SECTIONS ===== */
-.brand-section {
-  position: relative;
-  height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.brand-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-.brand-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-
-.brand-content h2 {
-  font-size: 2.5rem;
   margin-bottom: 15px;
-  letter-spacing: 2px;
 }
 
-.brand-content p {
-  font-size: 1.05rem;
+/* SECTION STYLE */
+.section {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.brand-content a {
+.section img {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.section a {
   display: inline-block;
   padding: 12px 24px;
-  background: #ffffff;
-  color: #000;
+  background: black;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-  background: #1c1c1c;
+  background: #111;
   color: white;
   text-align: center;
-  padding: 50px 20px;
-}
-
-footer a {
-  color: #4db8ff;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 40px 20px;
 }
 </style>
 </head>
@@ -106,63 +75,54 @@ footer a {
 
 <header>
   <h1>Premium Beverages Portfolio</h1>
-  <p>
-    A curated collection of premium wines and spirits crafted with
-    authenticity, heritage, and excellence for global markets.
-  </p>
+  <p>Crafted Wines & Spirits for Global Distribution</p>
 </header>
 
-<!-- Hook or Crook -->
-<div class="brand-section" style="background-image: url('hook-or-crook-header.png');">
-  <div class="brand-content">
-    <h2>Hook or Crook Cellars</h2>
-    <p>Premium California wine crafted with bold character and refined finish.</p>
-    <a href="#">Learn More</a>
-  </div>
+<!-- HOOK OR CROOK -->
+<div class="section">
+  <img src="hook or crook cellars.png" alt="Hook or Crook Cellars">  <h2>Hook or Crook Cellars</h2>
+  <p>Premium California wine crafted with bold character and refined finish.</p>
+  <a href="https://www.google.com/search?q=hook+or+crook+wine" target="_blank">
+    Visit Brand
 </div>
 
-<!-- Juniper Hill Gin -->
-<div class="brand-section" style="background-image: url('juniper-hill-header.jpg');">
-  <div class="brand-content">
-    <h2>Juniper Hill Gin</h2>
-    <p>Handcrafted London Dry gin infused with botanical depth and elegance.</p>
-    <a href="#">Learn More</a>
-  </div>
+<!-- JUNIPER HILL -->
+<div class="section">
+  <img src="juniper hill gin.jpeg" alt="Juniper Hill Gin">  <h2>Juniper Hill Gin</h2>
+  <p>Handcrafted London Dry gin with botanical complexity and smooth finish.</p>
+  <a href="https://www.google.com/search?q=juniper+hill+gin" target="_blank">
+    Visit Brand
 </div>
 
-<!-- Spur Vodka -->
-<div class="brand-section" style="background-image: url('spur-vodka-header.jpg');">
-  <div class="brand-content">
-    <h2>Spur Vodka</h2>
-    <p>Western-inspired premium vodka delivering smooth sophistication.</p>
-    <a href="https://spurvodka.com">Visit Site</a>
-  </div>
+<!-- SPUR VODKA -->
+<div class="section">
+  <img src="spur vodka.jpeg" alt="Spur Vodka">  <h2>Spur Vodka</h2>
+  <p>Western-inspired premium vodka delivering bold smoothness.</p>
+  <a href="https://spurvodka.com" target="_blank">
+    Visit Website
 </div>
 
-<!-- Kopper Garden Vodka -->
-<div class="brand-section" style="background-image: url('kopper-garden-header.jpg');">
-  <div class="brand-content">
-    <h2>Kopper Garden Vodka</h2>
-    <p>Artisan-crafted vodka offering purity, refinement, and balance.</p>
-    <a href="#">Learn More</a>
-  </div>
+<!-- KOPPER GARDEN -->
+<div class="section">
+  <img src="kopper garden.jpeg" alt="Kopper Garden Vodka">  <h2>Kopper Garden Vodka</h2>
+  <p>Artisan-crafted vodka offering purity and elegance.</p>
+  <a href="#" target="_blank">
+    Contact for Details
 </div>
 
-<!-- Tequila Avanzado -->
-<div class="brand-section" style="background-image: url('tequila-avanzado-header.jpg');">
-  <div class="brand-content">
-    <h2>Tequila Avanzado</h2>
-    <p>Authentic tequila designed for bold flavor and a smooth premium finish.</p>
-    <a href="#">Visit Site</a>
-  </div>
+<!-- TEQUILA AVANZADO -->
+<div class="section">
+  <img src="tequila avanzado.jpeg" alt="Tequila Avanzado">  <h2>Tequila Avanzado</h2>
+  <p>Authentic tequila designed for bold flavor and smooth finish.</p>
+  <a href="https://tequilaavanzado.com" target="_blank">
+    Visit Website
 </div>
 
 <footer>
   <h3>Product Creator & Contact</h3>
   <p><strong>John Healy</strong></p>
-  <p>Email: <a href="mailto:jhealy@gms360.com">jhealy@gms360.com</a></p>
-  <p>&copy; 2026 Premium Beverages Portfolio</p>
+  <p>Email: jhealy@gms360.com</p>
 </footer>
 
 </body>
-</html> 
+</html>
