@@ -3,58 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Beverages Portfolio</title>
+<title>Premium Beverages | Global Distribution</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f8f8;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  width: 100%;
+  background: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+nav h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+/* HERO */
 header {
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url("IMG_4020.jpeg);
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url("header.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  padding: 140px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: white;
+  padding: 0 20px;
 }
 
-/* SECTION STYLE */
-.section {
-  background: white;
-  padding: 60px 20px;
-  text-align: center;
+header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
   margin-bottom: 20px;
+}
+
+header p {
+  max-width: 700px;
+  margin: auto;
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* SECTION */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 120px 80px;
+  background: white;
+}
+
+.section:nth-child(even) {
+  background: #f2f2f2;
 }
 
 .section img {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
+  width: 300px;
+  max-width: 100%;
+  transition: 0.4s ease;
 }
 
-.section h2 {
+.section img:hover {
+  transform: scale(1.05);
+}
+
+.section-content {
+  max-width: 500px;
+}
+
+.section-content h3 {
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-.section p {
-  max-width: 700px;
-  margin: 0 auto 20px;
+.section-content p {
+  margin-bottom: 25px;
+  color: #444;
 }
 
-.section a {
+.section-content a {
   display: inline-block;
-  padding: 12px 24px;
-  background: black;
+  padding: 12px 30px;
+  background: #111;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.section-content a:hover {
+  background: #333;
 }
 
 /* FOOTER */
@@ -62,72 +137,95 @@ footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+}
+
+footer h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+footer p {
+  opacity: 0.8;
+  margin-bottom: 10px;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <h1>Premium Beverages</h1>
+  <div>
+    <a href="#">Portfolio</a>
+    <a href="#">Distribution</a>
+    <a href="mailto:jhealy@gms360.com">Contact</a>
+  </div>
+</nav>
+
 <header>
-  <h1>Premium Beverages Portfolio</h1>
-  <p>Crafted Wines & Spirits for Global Distribution</p>
+  <div>
+    <h2>Global Wine & Spirits Distribution</h2>
+    <p>Curating exceptional brands across wine, vodka, gin, and tequila for premium markets worldwide.</p>
+  </div>
 </header>
 
-<!-- HOOK OR CROOK -->
-<div class="section">
-  <img src="hook or crook cellars.png" alt="Hook or Crook Cellars">
-  <h2>Hook or Crook Cellars</h2>
-  <p>Premium California wine crafted with bold character and refined finish.</p>
-  <a href="https://www.google.com/search?q=hook+or+crook+wine" target="_blank">
-    Visit Brand
-  </a>
-</div>
+<!-- Hook or Crook -->
+<section class="section">
+  <img src="hook or crook cellars.png" alt="Hook or Crook">
+  <div class="section-content">
+    <h3>Hook or Crook Cellars</h3>
+    <p>California-crafted wine delivering depth, character, and refined structure for discerning consumers.</p>
+    <a href="https://www.google.com/search?q=hook+or+crook+wine" target="_blank">Explore Brand</a>
+  </div>
+</section>
 
-<!-- JUNIPER HILL -->
-<div class="section">
+<!-- Juniper Hill -->
+<section class="section">
+  <div class="section-content">
+    <h3>Juniper Hill Gin</h3>
+    <p>Handcrafted London Dry gin infused with premium botanicals and a timeless, elegant finish.</p>
+    <a href="https://www.google.com/search?q=juniper+hill+gin" target="_blank">Explore Brand</a>
+  </div>
   <img src="juniper hill gin.jpeg" alt="Juniper Hill Gin">
-  <h2>Juniper Hill Gin</h2>
-  <p>Handcrafted London Dry gin with botanical complexity and smooth finish.</p>
-  <a href="https://www.google.com/search?q=juniper+hill+gin" target="_blank">
-    Visit Brand
-  </a>
-</div>
+</section>
 
-<!-- SPUR VODKA -->
-<div class="section">
+<!-- Spur Vodka -->
+<section class="section">
   <img src="spur vodka.jpeg" alt="Spur Vodka">
-  <h2>Spur Vodka</h2>
-  <p>Western-inspired premium vodka delivering bold smoothness.</p>
-  <a href="https://spurvodka.com" target="_blank">
-    Visit Website
-  </a>
-</div>
+  <div class="section-content">
+    <h3>Spur Vodka</h3>
+    <p>Western-inspired premium vodka known for smooth texture and sophisticated profile.</p>
+    <a href="https://spurvodka.com" target="_blank">Visit Website</a>
+  </div>
+</section>
 
-<!-- KOPPER GARDEN -->
-<div class="section">
+<!-- Kopper Garden -->
+<section class="section">
+  <div class="section-content">
+    <h3>Kopper Garden Vodka</h3>
+    <p>Artisan-distilled vodka offering purity, balance, and refined presentation.</p>
+    <a href="#">Request Information</a>
+  </div>
   <img src="kopper garden.jpeg" alt="Kopper Garden Vodka">
-  <h2>Kopper Garden Vodka</h2>
-  <p>Artisan-crafted vodka offering purity and elegance.</p>
-  <a href="#">
-    Contact for Details
-  </a>
-</div>
+</section>
 
-<!-- TEQUILA AVANZADO -->
-<div class="section">
+<!-- Tequila Avanzado -->
+<section class="section">
   <img src="tequila avanzado.jpeg" alt="Tequila Avanzado">
-  <h2>Tequila Avanzado</h2>
-  <p>Authentic tequila designed for bold flavor and smooth finish.</p>
-  <a href="https://tequilaavanzado.com" target="_blank">
-    Visit Website
-  </a>
-</div>
+  <div class="section-content">
+    <h3>Tequila Avanzado</h3>
+    <p>Authentic tequila crafted for bold flavor, heritage authenticity, and premium distribution.</p>
+    <a href="https://tequilaavanzado.com" target="_blank">Visit Website</a>
+  </div>
+</section>
 
 <footer>
-  <h3>Product Creator & Contact</h3>
+  <h4>Product Creator & Distribution Contact</h4>
   <p><strong>John Healy</strong></p>
   <p>Email: jhealy@gms360.com</p>
+  <p>&copy; 2026 Premium Beverages Portfolio</p>
 </footer>
 
 </body>
