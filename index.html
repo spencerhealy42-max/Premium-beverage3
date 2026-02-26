@@ -8,29 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 120px 80px;
-  margin: 60px auto;
-  max-width: 1200px;
-  background: rgba(25, 25, 25, 0.85);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-
-  .section-content h3 a {
-  text-decoration: none;
-  color: #e6c17a;
-  transition: 0.3s ease;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.section-content h3 a:hover {
-  color: #ffffff;
-}
-  
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.95)),
@@ -50,6 +33,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 
 nav h1 {
@@ -60,9 +44,14 @@ nav h1 {
 
 nav a {
   text-decoration: none;
-  color: #111;
+  color: #e6c17a;
   margin-left: 30px;
   font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
 }
 
 /* HERO */
@@ -76,7 +65,6 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   padding: 0 20px;
 }
 
@@ -95,18 +83,19 @@ header p {
   opacity: 0.9;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
   padding: 120px 80px;
-  background: white;
-}
-
-.section:nth-child(even) {
-  background: #f2f2f2;
+  margin: 80px auto;
+  max-width: 1200px;
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
 .section img {
@@ -130,43 +119,37 @@ header p {
   letter-spacing: 1px;
 }
 
-.section-content p {
-  margin-bottom: 25px;
-  color: #444;
-}
-
-.section-content a {
-  display: inline-block;
-  padding: 12px 30px;
-  background: #111;
-  color: white;
+.section-content h3 a {
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: 500;
+  color: #e6c17a;
   transition: 0.3s ease;
 }
 
-.section-content a:hover {
-  background: #333;
+.section-content h3 a:hover {
+  color: white;
+}
+
+.section-content p {
+  margin-bottom: 25px;
+  color: #ccc;
 }
 
 /* FOOTER */
 footer {
   background: #111;
-  color: white;
   text-align: center;
   padding: 60px 20px;
+  margin-top: 100px;
 }
 
 footer h4 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 15px;
-  letter-spacing: 1px;
 }
 
 footer p {
   opacity: 0.8;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 </style>
 </head>
@@ -193,11 +176,7 @@ footer p {
 <section class="section">
   <img src="hook or crook cellars.png" alt="Hook or Crook">
   <div class="section-content">
-    <h3>
-      <a href="https://www.google.com/search?q=hook+or+crook+wine" target="_blank">
-        Hook or Crook Cellars
-      </a>
-    </h3>
+    <h3><a href="https://www.google.com/search?q=hook+or+crook+wine" target="_blank">Hook or Crook Cellars</a></h3>
     <p>California-crafted wine delivering depth, character, and refined structure for discerning consumers.</p>
   </div>
 </section>
@@ -205,11 +184,7 @@ footer p {
 <!-- Juniper Hill -->
 <section class="section">
   <div class="section-content">
-    <h3>
-      <a href="https://www.google.com/search?q=juniper+hill+gin" target="_blank">
-        Juniper Hill Gin
-      </a>
-    </h3>
+    <h3><a href="https://www.google.com/search?q=juniper+hill+gin" target="_blank">Juniper Hill Gin</a></h3>
     <p>Handcrafted London Dry gin infused with premium botanicals and a timeless, elegant finish.</p>
   </div>
   <img src="juniper hill gin.jpeg" alt="Juniper Hill Gin">
@@ -219,11 +194,7 @@ footer p {
 <section class="section">
   <img src="spur vodka.jpeg" alt="Spur Vodka">
   <div class="section-content">
-    <h3>
-      <a href="https://spurvodka.com" target="_blank">
-        Spur Vodka
-      </a>
-    </h3>
+    <h3><a href="https://spurvodka.com" target="_blank">Spur Vodka</a></h3>
     <p>Western-inspired premium vodka known for smooth texture and sophisticated profile.</p>
   </div>
 </section>
@@ -231,11 +202,7 @@ footer p {
 <!-- Kopper Garden -->
 <section class="section">
   <div class="section-content">
-    <h3>
-      <a href="#">
-        Kopper Garden Vodka
-      </a>
-    </h3>
+    <h3><a href="#">Kopper Garden Vodka</a></h3>
     <p>Artisan-distilled vodka offering purity, balance, and refined presentation.</p>
   </div>
   <img src="kopper garden.jpeg" alt="Kopper Garden Vodka">
@@ -245,32 +212,20 @@ footer p {
 <section class="section">
   <img src="tequila avanzado.jpeg" alt="Tequila Avanzado">
   <div class="section-content">
-    <h3>
-      <a href="https://tequilaavanzado.com" target="_blank">
-        Tequila Avanzado
-      </a>
-    </h3>
-    <p>Authentic tequila crafted for bold flavor, heritage authenticity, and premium distribution.</p>
+    <h3><a href="https://tequilaavanzado.com" target="_blank">Tequila Avanzado</a></h3>
+    <p>Authentic tequila crafted for bold flavor and premium distribution.</p>
   </div>
 </section>
 
-  <!-- The Committee Wine -->
+<!-- The Committee Wine -->
 <section class="section">
   <div class="section-content">
-    <h3>
-      <a href="https://vultourwines.com" target="_blank">
-        The Committee – Vultour Wines
-      </a>
-    </h3>
-    <p>
-      A premium wine selection crafted under the Vultour Wines portfolio,
-      delivering refined structure, bold character, and elevated market positioning.
-    </p>
+    <h3><a href="https://vultourwines.com" target="_blank">The Committee – Vultour Wines</a></h3>
+    <p>A premium wine selection crafted under the Vultour Wines portfolio, delivering refined structure and elevated market positioning.</p>
   </div>
   <img src="the-committee-wine.jpeg" alt="The Committee Wine">
 </section>
 
-  
 <footer>
   <h4>Product Creator & Distribution Contact</h4>
   <p><strong>John Healy</strong></p>
