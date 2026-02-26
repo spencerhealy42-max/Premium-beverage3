@@ -16,10 +16,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.95)),
-              url("vineyard-bg.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #0f0f0f;
   color: #f5f5f5;
 }
 
@@ -54,13 +51,14 @@ nav a:hover {
   color: white;
 }
 
-/* HERO */
+/* HERO WITH VINEYARD BACKGROUND */
 header {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-              url("header.jpg");
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+              url("vineyard-bg.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,9 +68,10 @@ header {
 
 header h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   letter-spacing: 3px;
   margin-bottom: 20px;
+  text-shadow: 0 5px 30px rgba(0,0,0,0.9);
 }
 
 header p {
@@ -83,14 +82,14 @@ header p {
   opacity: 0.9;
 }
 
-/* SECTIONS */
+/* GLASS SECTIONS */
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
   padding: 120px 80px;
-  margin: 80px auto;
+  margin: 100px auto;
   max-width: 1200px;
   background: rgba(25, 25, 25, 0.85);
   backdrop-filter: blur(10px);
@@ -126,25 +125,27 @@ header p {
 }
 
 .section-content h3 a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .section-content p {
   margin-bottom: 25px;
   color: #ccc;
+  line-height: 1.6;
 }
 
 /* FOOTER */
 footer {
   background: #111;
   text-align: center;
-  padding: 60px 20px;
-  margin-top: 100px;
+  padding: 80px 20px;
+  margin-top: 120px;
 }
 
 footer h4 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 footer p {
