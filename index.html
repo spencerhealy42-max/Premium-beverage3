@@ -8,20 +8,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 120px 80px;
+  margin: 60px auto;
+  max-width: 1200px;
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 
   .section-content h3 a {
   text-decoration: none;
-  color: inherit;
+  color: #e6c17a;
   transition: 0.3s ease;
 }
 
 .section-content h3 a:hover {
-  color: #888;
+  color: #ffffff;
 }
   
 body {
@@ -37,13 +44,12 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  background: white;
+  background: rgba(0,0,0,0.85);
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-  z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
 nav h1 {
